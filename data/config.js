@@ -28,11 +28,11 @@ GSIBV.CONFIG.ProgressMode = 'righttop';
 GSIBV.CONFIG.ComtextMenuProps = [
   "ftCode",
   "annoCtg",
-  "annoChar", 
+  "annoChar",
   "knj",
   "kana",
   "motorway",
-  "rdCtg",    
+  "rdCtg",
   "tollSect",
   "medSect",
   "rnkWidth",
@@ -139,7 +139,7 @@ GSIBV.CONFIG.VectorTileSourceList = [
 //ZL5,9,12,15,18のタイルを使用する例
 GSIBV.CONFIG.VectorTileSourceList =[
   {"minzoom":5,"maxzoom":5},
-  {"minzoom":9,"maxzoom":9}, 
+  {"minzoom":9,"maxzoom":9},
   {"minzoom":12,"maxzoom":12},
   {"minzoom":15,"maxzoom":15},
   {"minzoom":18,"maxzoom":18}
@@ -181,7 +181,7 @@ GSIBV.CONFIG.RECOMMEND = [
       "thumbnail" : "./image/thumb/sample03.png" ,
       "url" : "./data/current2.json"
   },
-  
+
   {
     "id": "pale",
     "type": "raster",
@@ -219,7 +219,7 @@ GSIBV.CONFIG.RECOMMEND = [
     "legendUrl": "https://maps.gsi.go.jp/development/ichiran.html#blank"
   },
   */
-  
+
   {
     "id": "photo",
     "type": "raster",
@@ -227,7 +227,7 @@ GSIBV.CONFIG.RECOMMEND = [
     "thumbnail": "./image/thumb/ort.png",
     "url": "https://cyberjapandata.gsi.go.jp/xyz/ort/{z}/{x}/{y}.jpg",
     "html": "<div class=\"gsi_layerinfo_subtitle\">ズームレベル2～8:「世界衛星モザイク画像」<br>ズームレベル9～13:「全国ランドサットモザイク画像」<br>ズームレベル14～18:「シームレス空中写真」<br>シームレス空中写真は、国土地理院が保有する複数種別の空中写真から、各地区における最新の写真を抽出・組み合わせて作成した写真レイヤです。</div><a target=\"_blank\" href=\"https://cyberjapandata.gsi.go.jp/legend/seamlessphoto.pdf\">（詳細解説）</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
-  },  
+  },
   {
     "id": "photolabel",
     "type": "layerset",
@@ -356,6 +356,10 @@ GSIBV.CONFIG.MENU = [
   {
     "id": "gsimaps",
     "title": "地理院地図で表示"
+  },
+  {
+    "id": "export",
+    "title": "Export style.json"
   }
 
 ];

@@ -5,7 +5,7 @@ GSIBV.UI.MainMenu = class extends MA.Class.Base {
 
     this._app = app;
     this._options = options;
-    
+
     this._origMenu = JSON.parse( JSON.stringify(this._options.menu) );
     this._menu = JSON.parse( JSON.stringify(this._options.menu) );
     this._onLangChange();
@@ -21,7 +21,7 @@ GSIBV.UI.MainMenu = class extends MA.Class.Base {
   _onLangChange(e) {
     var lang = this._app.lang;
     this._menu = JSON.parse( JSON.stringify(this._origMenu) );
-    
+
     if ( lang == "ja") return;
 
     var mainMenu = GSIBV.CONFIG.LANG[lang.toUpperCase()].UI.MAINMENU;
@@ -54,6 +54,10 @@ GSIBV.UI.MainMenu = class extends MA.Class.Base {
         break;
       case "eng":
         this._app.lang = ( this._app.lang == "ja" ? "en" : "ja" );
+        break;
+      case "export":
+        var style = GSIBV.application._map._map.getStyle();
+        MA.saveFile("style.json","application/json",JSON.stringify(style,null,2));
         break;
     }
   }
